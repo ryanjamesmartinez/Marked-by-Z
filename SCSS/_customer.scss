@@ -1,0 +1,24 @@
+.customer{
+    &__table{
+        background-color: $white;
+        background-size: 30%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 20rem;
+        height: 92%;
+        width: 100%;
+        margin: 16px;
+    }
+
+    &__buttons{
+        background-color: $white;
+        background-size: 60%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 20rem;
+        height: 92%;
+        width: 100%;
+        margin: 16px;
+        margin-left: 370px;
+    }
+}

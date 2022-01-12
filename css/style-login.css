@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    background: #3C3E40;
+  }
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 9%;
+    width: 15%;
+    height: 15%;
+  }
+
+  input {
+    font-size: 16px;
+    width: 35%;
+    padding: 0.8em;
+    border-radius: 10px;
+    border: 2px solid grey;
+  }
+  
+  button {
+    font-size: 16px;
+    width: 35%;
+    padding: 0.8em;
+    background-color: #00A44E;
+    color: white;
+    border-radius: 10px;
+  }
+  
+  a {
+    margin-left: 10.5%;
+    color: white;
+  }
+
+  .box {
+    display: block;
+    margin-left: 39.5%;
+    margin-top: 5%;
+  }
+
+  

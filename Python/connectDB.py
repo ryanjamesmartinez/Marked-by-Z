@@ -42,3 +42,4 @@ def spcall(qry, param, commit=False):
 
 #print(spcall("login",("Zaide001",))[0][0])
 #print(spcall_display("display_customer"))
+#print(spcall("delete_customer",("2022-0010",))[0][0])

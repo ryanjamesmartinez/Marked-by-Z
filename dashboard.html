@@ -2,11 +2,15 @@
 <html>
 <head>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
+    <title>Reservation System</title>
 </head>
-<body>
+<body onload=" displaytotalCustomer();">
     <div class="topnav">
         <a href="#" style="float:right;font-size:large">▾</a>
-        <a href="#" style="float:right">/image</a>
+        <a href="#" style="float:right; padding: 12px;">
+            <img src="Assets/logo.png">
+        </a>
 
         <div class="toggle-btn" style="float:left" onclick ="show()">
             <span></span>
@@ -16,38 +20,83 @@
     </div>
      
     <div id="sidebar">
+        <div class = "center-logo">
+			<img src="Assets/s-logo.png" width="100" height = "100">
+		</div>
         <div>
-            <a href="dashboard.html">Dashboard</a>
-            <a href="customer.html">Customer</a>
-            <a href="reservation.html">Reservation</a>
+			<a href="dashboard.html">
+				<img src="Assets/dash.png" width="200" height = "45"> 
+			</a>
+            <a href="customer.html">
+				<img src="Assets/customer.png" width="200" height = "45">
+			</a>
+            <a href="reservation.html">
+				<img src="Assets/reserve.png" width="200" height = "45">
+			</a>
+            <a href="login.html">
+                <img src="Assets/logout.png" width="200" height = "45">
+			</a>
         </div>
     </div>
 
     <div class="row">
         <div class="leftcolumn">
             <div class="card">
-                <h2>TOTAL</h2>
-                <div class="fakeimg" style="height:200px;"></div>
+                <div class="columns">
+                    <div class="box" id="customer" style="height:170px;">
+                        <p style="font-size: 1.5em; margin-left: 1.2em;">Customer</p>
+                    </div>
+                    <div class="box" id="reservation" style="height:170px;">
+                        <p style="font-size: 1.5em; margin-left: 1.2em;">Reservation</p>
+                    </div>
+                    <div class="box" id="completed-reservation" style="height:170px;">
+                        <p style="font-size: 1.5em; margin-left: 1.2em;">Completed Reservation</p>
+                    </div>
+                </div>
                 <!--
                 <p>Some text..</p>
                 <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
                 -->
             </div>
+            <!--
             <div class="card">
                 <h2>GRAPH</h2>
-                <div class="fakeimg" style="height:200px;"></div>
             </div>
+            -->
         </div>
         <div class="rightcolumn">
             <div class="card">
-                <h2>Calendar</h2>
-                <div class="fakeimg" style="height:200px;"></div>
-            </div>
-            <div class="card">
-                <h3>Upcomming Reservation</h3>
-                <div class="fakeimg"><p></p></div>
+                <h2 style="font-size: 1.2em; color: white;">Calendar</h2>
+                <div class="softcard">
+                    <div class="calendar-bar">
+                      <button class="prev soft-btn"><i class="fas fa-chevron-left"></i></button>
+                      <div class="current-month"></div>
+                      <button class="next soft-btn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="calendar">
+                      <div class="weekdays-name">
+                        <div class="days-name">Sa</div>
+                        <div class="days-name">Su</div>
+                        <div class="days-name">Mo</div>
+                        <div class="days-name">Tu</div>
+                        <div class="days-name">We</div>
+                        <div class="days-name">Th</div>
+                        <div class="days-name">Fr</div>
+                      </div>
+                      <div class="calendar-days"></div>
+                    </div>
+                    <div class="goto-buttons">
+                      <button type="button" class="btn prev-year">Prev Year</button>
+                      <button type="button" class="btn today">Today</button>
+                      <button type="button" class="btn next-year">Next Year</button>
+                    </div>
+                  </div>
             </div>
             <!--
+            <div class="card">
+                <h3 style="font-size: 1.2em; color: white;">Upcomming Reservation</h3>
+            </div>
+            
             <div class="card">
                  <h3>Follow Me</h3>
                  <p>Some text..</p>
@@ -55,7 +104,10 @@
             -->
         </div>
     </div>
+    <script src="Javascript/jQuery-2.1.4.min.js"></script>
     <script src="Javascript/script.js"></script>
     <script src="Javascript/app.js"></script>
 </body>
 </html>
+
+<!--https://codepen.io/softcodeon/pen/BawBvaa-->

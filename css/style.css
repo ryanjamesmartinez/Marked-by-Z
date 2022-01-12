@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     font-family: Arial;
-    background: #f1f1f1;
+    background: #3C3E40;
   }
   
   /* Header/Blog Title */
@@ -23,7 +23,7 @@
   /* Style the top navigation bar */
   .topnav {
     overflow: hidden;
-    background-color: #CDC9A5;
+    background-color: #00A44E;
   }
   
   /* Style the topnav links */
@@ -112,6 +112,10 @@
     left: 0;
   }
   
+  .center-logo{
+    margin: 70px;
+  }
+  
   /* Create two unequal columns that floats next to each other */
   /* Left column */
   .leftcolumn {   
@@ -124,7 +128,7 @@
   .rightcolumn {
     float: left;
     width: 25%;
-    background-color: #f1f1f1;
+    background-color: #3C3E40;
     padding-left: 20px;
     padding-right: 10px;
   }
@@ -135,12 +139,34 @@
     width: 100%;
     padding: 20px;
   }
+
+  .box {
+    background-color: #3C3E40;
+    width: 320px;
+    padding: 0px;
+    border-radius: 20px;
+    margin: 0px;
+    margin-right: 30px;
+    margin-top: 30px;
+  }
+
+  .box p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+  
+  .columns {
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: 30px;
+  }
   
   /* Add a card effect for articles */
   .card {
-    background-color: white;
+    background-color: #2B2B2B;
     padding: 20px;
     margin-top: 20px;
+    border-radius: 15px;
   }
   
   /* Clear floats after the columns */
@@ -175,3 +201,100 @@
     }
   }
   */
+
+  #customer{
+    color: white;
+  }
+
+  #reservation{
+    color: white;
+  }
+
+  #completed-reservation{
+    color: white;
+  }
+
+  /*Calendar*/
+  
+  .softcard {  width: 316px;  height: fit-content;
+    background: #3C3E40;
+    /*background: #CDC9A5;-webkit-linear-gradient(to right, #f7b733, #fc4a1a);   Chrome 10-25, Safari 5.1-6 */
+    /*background: #CDC9A5;linear-gradient(to right, #f7b733, #fc4a1a);  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 20px;  /*box-shadow: 0px 0px 5px #000;*/
+  }
+  
+  .calendar-bar {  display: flex;  justify-content: space-between;
+    align-items: center;  padding: 20px;  padding-bottom: 15px;
+    border-bottom: 19px;
+  }
+  
+  .calendar-bar > .current-month {
+    font-size:15px;  font-weight: bold;  color: #ddd; 
+    padding:5px; 
+  }
+  
+  .calendar-bar > [class$="soft-btn"] {
+    width: 30px;  aspect-ratio: 1;  text-align: center;
+    line-height: 30px;  font-size: 14px;  color: #000;
+    background: #00A44E;  border: none;  border-radius: 50%;
+  }
+  
+  .weekdays-name,
+  .calendar-days {  display: flex;  flex-wrap: wrap;  padding-inline:18px; }
+  .weekdays-name {  padding-top: 0px;}
+  
+  .calendar-days {  padding-bottom: 0px;}
+  
+  .days-name,
+  [class$="-day"] {  width: 40px;  height: 40px;  color: #fff;  text-align: center;
+    line-height: 40px;  font-weight: 500;  font-size: 1rem;
+  }
+  
+  .days-name {  color: white;  font-weight: 700;}
+  
+  .current-day {
+    background-color: #00A44E;  color: #fff;
+    border-radius: 50%;  font-weight: 700;  transition: 0.5s;  cursor: pointer;
+  }
+
+  .reserved-day {
+    background-color: red;  color: #fff;
+    border-radius: 50%;  font-weight: 700;  transition: 0.5s;  cursor: pointer;
+  }
+
+  .completed-reserved-day {
+    background-color: black;  color: #fff;
+    border-radius: 50%;  font-weight: 700;  transition: 0.5s;  cursor: pointer;
+  }
+  
+  .padding-day {
+    color: #a5a5a5;  user-select: none;
+  }
+  
+  .calendar-bar > [class$="soft-btn"]:hover,
+  .month-day:hover,
+  .btn:hover {
+    border-radius:5px;  background-color:#f8f7fa;  color:#000;  border-radius:15px;
+    transition: 0.1s;  cursor: pointer;
+   
+  }
+  
+  .calendar-bar > [class$="soft-btn"]:focus,
+  .month-day:focus,
+  .btn:focus {  border-radius:15px;  background-color: #00A44E;  color: #000;
+  }
+  
+  .goto-buttons {
+    padding-block: 18px;  display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .btn {
+    background: #00A44E  ;
+    border: none;  
+    border-radius: 10px;
+    padding: 11px 13px;  
+    color:#000;  font-family: "Quicksand", sans-serif;
+    font-weight: 600;  font-size: 0.9rem;  margin-right: 1px;  box-shadow: 0px 0px 0px #000;
+  }
+  

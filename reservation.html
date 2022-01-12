@@ -2,11 +2,14 @@
 <html>
 <head>
     <link rel="stylesheet" href="css/style-reservation.css">
+    <title>Reservation System</title>
 </head>
-<body>
+<body onload="displayReservation();">
     <div class="topnav">
         <a href="#" style="float:right;font-size:large">▾</a>
-        <a href="#" style="float:right">/image</a>
+        <a href="#" style="float:right; padding: 12px;">
+            <img src="Assets/logo.png">
+        </a>
 
         <div class="toggle-btn" style="float:left" onclick ="show()">
             <span></span>
@@ -16,28 +19,104 @@
     </div>
      
     <div id="sidebar">
+        <div class = "center-logo">
+			<img src="Assets/s-logo.png" width="100" height = "100">
+		</div>
         <div>
-            <a href="dashboard.html">Dashboard</a>
-            <a href="customer.html">Customer</a>
-            <a href="reservation.html">Reservation</a>
+			<a href="dashboard.html">
+				<img src="Assets/dash.png" width="200" height = "45">
+			</a>
+            <a href="customer.html">
+				<img src="Assets/customer.png" width="200" height = "45">
+			</a>
+            <a href="reservation.html">
+				<img src="Assets/reserve.png" width="200" height = "45">
+			</a>
+            <a href="login.html">
+                <img src="Assets/logout.png" width="200" height = "45">
+			</a>
         </div>
     </div>
 
     <div class="row">
         <div class="leftcolumn">
             <div class="card">
-                <h2>Entries</h2>
-                <div class="fakeimg" style="height:200px;"></div>
-                <!--
-                <p>Some text..</p>
-                <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                -->
+                <h2 style="color: white;">Reservation</h2>
+                <div class = "wrapper">
+                    <label for="RID">Reservation ID:</label>
+                    <input type="text" id="c_RID" name="RID"  placeholder="2022-0001" pattern="[0-9]{4}-[0-9]{4}" required> <br> <br>
+                    <label for="CID">Customer ID:</label>
+                    <select id="dropdown" name="CID">
+                    </select>
+                    <label for="date">Date:</label>
+                    <input type="date" id="c_date" name="date" required><br> <br>
+                    <label for="rstatus">Reservation Status:</label>
+                    <select id="c_rstatus" name="rstatus" required>
+                        <option>Reserved</option>
+                        <option>Completed</option>
+                    </select><br>
+                    <label for="pstatus">Payment Status:</label>
+                    <select id="c_pstatus" name="pstatus" required>
+                        <option>Partially Paid</option>
+                        <option>Fully Paid</option>
+                    </select><br>
+                    <label for="RT">Reservation Time:</label>
+                    <select id="c_RT" name="RT" required>
+                        <option>12 Hours</option>
+                        <option>24 Hours</option>
+                    </select><br>
+                        
+                    <div class="flex">
+                        <button id="Add">
+							<img src="Assets/add.png" width ="40" height="40">
+						</button>
+                        <button id="Clear">
+							<img src="Assets/clear.png" width ="40" height="40">
+						</button>
+                        <button id="Edit">
+							<img src="Assets/edit.png" width ="40" height="40">
+						</button>
+                        <button id="Delete">
+							<img src="Assets/delete.png" width ="40" height="40">
+						</button>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="rightcolumn">
             <div class="card">
-                <h2>Table</h2>
-                <div class="fakeimg" style="height:200px;"></div>
+                <div class="upper-heading" style="float:left">
+                    <input type="text" id="id" name="id">
+                    <button id="Search">
+						<img src="Assets/search.png" width ="30" height="30">
+					</button>
+                </div>
+                    <table id="customers" >
+                        <tr class="header">
+                            <td width="150px">R-ID</td>
+                            <td width="150px">C-ID</td>
+                            <td width="150px">Date</td>
+                            <td width="150px">R-Status</td>
+                            <td width="150px">P-Status</td>
+                            <td width="150px">R-Time</td>
+                        </tr>
+                    </table>
+                <div class="scrollbar">
+                    <div class="scrollbar-child">
+                        <table id="display">
+                        </table>
+                        <table id="display-search">
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <!--<button onload="loadtasks();">Load Customer</button>-->
+                <div id="tasks"></div>
             </div>
             <!--
             <div class="card">
@@ -47,6 +126,8 @@
             -->
         </div>
     </div>
-    <script src="Javascript/script.js"></script>
+    <script src="Javascript/jQuery-2.1.4.min.js"></script>
+    <!--<script src="Javascript/script.js"></script>-->
+    <script src="Javascript/reservation.js"></script>
 </body>
 </html>
